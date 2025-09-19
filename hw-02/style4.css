@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.friends-section {
+    width: 100%;
+    max-width: 900px;
+}
+
+.friends-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.friends-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.friend-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+.friend-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.friend-card p {
+    margin: 5px 0 15px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.blank {
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 50%;
+}
