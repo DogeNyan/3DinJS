@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ИТД-21М Зеленков Павел</title>
+    </head>
+    <body>
+    <script>
+    //===================================================================
+    //Задание 1
+    console.log("--- Задание 1 ---");
+        function filterEvenNumbers(arr) {
+            return arr.filter(function(number) {
+                return number % 2 === 0;
+            });
+        }
+
+        // Тест 1: Пример из задания
+        const originalArray = [1, 2, 3, 4, 5, 6];
+        const evenArray = filterEvenNumbers(originalArray);
+        
+        console.log("Исходный массив:", originalArray);
+        console.log("Только чётные:", evenArray);
+
+        // Тест 2: Массив с отрицательными числами и нулём
+        const mixedArray = [-10, -5, 0, 3, 7, 12];
+        console.log("Смешанные числа:", filterEvenNumbers(mixedArray));
+
+        // Тест 3: Пустой массив
+        const emptyArray = [];
+        console.log("Пустой массив:", filterEvenNumbers(emptyArray));
+    //===================================================================
+    //Задание 2
+    console.log("--- Задание 2 ---");
+
+        function printReverseNumbers(n) {
+            if (n < 1) {
+                return;
+            }
+            console.log("Начинаем отсчет от " + n + ":");
+            while (n >= 1) {
+                console.log(n);
+                n--;
+            }
+        }
+        // Тест 1
+        printReverseNumbers(5); 
+
+        // Тест 2
+        printReverseNumbers(3);
+    //===================================================================
+    //Задание 3
+    console.log("--- Задание 3 ---");
+        function getWordLengths(words) {
+            return words.map(function(word) {
+                return word.length;
+            });
+        }
+
+        const fruits = ["яблоко", "банан", "апельсин"];
+        const lengths = getWordLengths(fruits);
+
+        console.log("Массив слов:", fruits);
+        console.log("Массив длин:", lengths); 
+    //===================================================================
+    //Задание 4
+    console.log("--- Задание 4 ---");
+        function printNumberedLines(arr) {
+            arr.forEach(function(item, index) {
+                console.log((index + 1) + ". " + item);
+            });
+        }
+
+        const greetings = ["Привет", "Как дела?", "До свидания"];
+        printNumberedLines(greetings);
+    //===================================================================
+    //Задание 5
+    console.log("--- Задание 5 ---");
+        function filterGreaterThan(arr, n) {
+            return arr.filter(function(number) {
+                return number > n;
+            });
+        }
+
+        const numbersToCheck = [10, 20, 30, 40, 50];
+        const threshold = 25;
+
+        const result = filterGreaterThan(numbersToCheck, threshold);
+        
+        console.log("Массив:", numbersToCheck);
+        console.log("Числа больше " + threshold + ":", result); 
+    </script>    
+    </body>
+</html>
