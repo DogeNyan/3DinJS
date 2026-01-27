@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Наше Go приложение
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      # Ссылка для подключения к БД
+      - DATABASE_URL=postgres://postgres:password@db:5432/games_db?sslmode=disable
+
+  # База данных Postgres
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=games_db
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

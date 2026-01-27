@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полка Любимых Игр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Моя Полка Игр</h1>
+    </header>
+
+    <main class="container">
+        <!-- Форма добавления игры -->
+        <section class="form-section">
+            <h2>Добавить игру</h2>
+            <form id="game-form">
+                <!-- Скрытое поле для хранения ID игры при редактировании -->
+                <input type="hidden" id="game-id">
+                <div class="form-group">
+                    <input type="text" id="title" placeholder="Название игры" required>
+                    <input type="text" id="genre" placeholder="Жанр (например: RPG)">
+                </div>
+                <div class="form-group">
+                    <select id="status" required>
+                        <option value="" disabled selected>Статус прохождения</option>
+                        <option value="Играю">Играю</option>
+                        <option value="Прошел">Прошел</option>
+                        <option value="В планах">В планах</option>
+                    </select>
+                    <input type="number" id="rating" min="0" max="10" placeholder="Оценка (0-10)" required>
+                </div>
+                <input type="url" id="image_url" placeholder="Ссылка на обложку (URL)">
+                <textarea id="comment" rows="3" placeholder="Ваш комментарий или заметка"></textarea>
+                
+                <!-- Кнопки управления -->
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">Добавить на полку</button>
+                    <!-- Кнопка отмены редактирования -->
+                    <button type="button" id="cancel-btn" style="display: none; background-color: #555;">Отмена</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Сетка с карточками игр -->
+        <section class="games-grid" id="games-grid">
+            <!-- Сюда JS будет добавлять карточки -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
